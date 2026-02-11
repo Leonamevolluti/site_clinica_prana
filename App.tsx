@@ -273,7 +273,14 @@ const App: React.FC = () => {
                 A melhor tecnologia em diagnóstico e os melhores especialistas reunidos no coração de Ivoti.
               </p>
               <div className="flex gap-4">
-                 <a href="#" className="w-12 h-12 rounded-full border border-gray-100 flex items-center justify-center text-gray-400 hover:bg-[#628E86] hover:text-white transition-all"><i className="fa-brands fa-instagram"></i></a>
+                 <a 
+                   href="https://www.instagram.com/ivotiprana?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   className="w-12 h-12 rounded-full border border-pink-100 flex items-center justify-center text-[#E1306C] bg-pink-50 hover:bg-[#E1306C] hover:text-white transition-all shadow-sm"
+                 >
+                   <i className="fa-brands fa-instagram text-xl"></i>
+                 </a>
                  <a href="#" className="w-12 h-12 rounded-full border border-gray-100 flex items-center justify-center text-gray-400 hover:bg-[#628E86] hover:text-white transition-all"><i className="fa-brands fa-facebook-f"></i></a>
               </div>
             </div>
