@@ -1,6 +1,8 @@
 
 import React from 'react';
 import { CLINICA_PRANA_DATA } from './constants';
+import logoPrana from './horizontal-verde.png';
+import drLeonam from './dr-leonam.jpg';
 
 const Logo: React.FC<{ className?: string; color?: string; showText?: boolean; variant?: 'wall' | 'standard' }> = ({ 
   className = "w-10", 
@@ -60,14 +62,12 @@ const App: React.FC = () => {
       {/* Navegação */}
       <nav className="fixed w-full bg-white/90 backdrop-blur-md z-[100] border-b border-gray-100 py-4 px-6 shadow-sm">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex items-center gap-4 cursor-pointer group" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
-            <div className="w-12 h-12 rounded-full flex items-center justify-center bg-[#D9E4D1] transition-transform group-hover:scale-105 shadow-inner">
-               <Logo className="w-8" color="#B19461" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-tight text-[#628E86] font-serif leading-none uppercase">CLÍNICA PRANA</span>
-              <span className="text-[10px] text-[#B19461] font-bold uppercase tracking-[0.3em] mt-1">Ivoti • RS</span>
-            </div>
+          <div className="cursor-pointer group" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
+            <img 
+              src={logoPrana} 
+              alt="Prana - Medicina por Imagem e Especialidades Médicas" 
+              className="h-12 md:h-14 w-auto transition-transform group-hover:scale-105"
+            />
           </div>
           
           <div className="hidden md:flex items-center gap-10 text-[11px] font-bold text-gray-500 uppercase tracking-[0.2em]">
@@ -249,12 +249,35 @@ const App: React.FC = () => {
                </div>
             </div>
           </div>
-          <div className="relative">
-             <div className="aspect-square bg-white/10 rounded-[100px] border border-white/20 overflow-hidden flex items-center justify-center backdrop-blur-sm group transition-all duration-700 hover:bg-white/15 shadow-2xl">
-                <Logo className="w-1/2 opacity-20 group-hover:opacity-40 transition-opacity duration-700" color="#FFFFFF" />
-                <div className="absolute inset-0 flex items-center justify-center p-12 lg:p-20 text-center opacity-0 group-hover:opacity-100 transition-all duration-700 transform translate-y-10 group-hover:translate-y-0">
-                   <p className="text-2xl font-serif font-bold leading-relaxed">Infraestrutura moderna e equipe dedicada ao seu bem-estar.</p>
-                </div>
+          <div className="relative group">
+             {/* Container da Imagem com Design Elegante */}
+             <div className="relative aspect-[3/4] w-full max-w-md mx-auto">
+               {/* Moldura Decorativa */}
+               <div className="absolute -inset-4 bg-gradient-to-br from-[#B19461]/30 to-[#628E86]/20 rounded-[60px] blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-700"></div>
+               
+               {/* Imagem Principal */}
+               <div className="relative h-full rounded-[50px] overflow-hidden shadow-2xl border-4 border-white/20 group-hover:border-[#B19461]/40 transition-all duration-500">
+                 <img 
+                   src={drLeonam} 
+                   alt="Dr. Leonam - Clínica Prana" 
+                   className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                 />
+                 
+                 {/* Overlay Gradiente Sutil */}
+                 <div className="absolute inset-0 bg-gradient-to-t from-[#628E86]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                 
+                 {/* Texto no Hover */}
+                 <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                   <p className="text-white text-lg font-serif font-bold leading-relaxed text-center drop-shadow-lg">
+                     Comprometidos com sua saúde e bem-estar.
+                   </p>
+                 </div>
+               </div>
+               
+               {/* Badge Decorativo */}
+               <div className="absolute -bottom-6 -right-6 bg-[#B19461] text-white px-6 py-3 rounded-full shadow-xl text-xs font-black uppercase tracking-widest">
+                 Excelência Médica
+               </div>
              </div>
           </div>
         </div>
@@ -265,10 +288,11 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-4 gap-16 mb-24">
             <div className="col-span-1 lg:col-span-1 space-y-8">
-              <div className="flex items-center gap-4">
-                 <Logo className="w-10" color="#628E86" />
-                 <span className="text-2xl font-bold tracking-tight text-[#628E86] font-serif uppercase">PRANA</span>
-              </div>
+              <img 
+                src={logoPrana} 
+                alt="Prana - Medicina por Imagem e Especialidades Médicas" 
+                className="h-10 w-auto"
+              />
               <p className="text-gray-500 font-light text-sm leading-relaxed max-w-xs">
                 A melhor tecnologia em diagnóstico e os melhores especialistas reunidos no coração de Ivoti.
               </p>
