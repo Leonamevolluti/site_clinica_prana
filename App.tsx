@@ -249,34 +249,60 @@ const App: React.FC = () => {
                </div>
             </div>
           </div>
-          <div className="relative group">
+          <div className="space-y-8">
              {/* Container da Imagem com Design Elegante */}
-             <div className="relative aspect-[3/4] w-full max-w-md mx-auto">
+             <div className="relative aspect-[3/4] w-full max-w-md mx-auto group">
                {/* Moldura Decorativa */}
                <div className="absolute -inset-4 bg-gradient-to-br from-[#B19461]/30 to-[#628E86]/20 rounded-[60px] blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-700"></div>
                
                {/* Imagem Principal */}
-               <div className="relative h-full rounded-[50px] overflow-hidden shadow-2xl border-4 border-white/20 group-hover:border-[#B19461]/40 transition-all duration-500">
+               <div className="relative h-full rounded-[50px] overflow-hidden shadow-2xl border-4 border-white/20 group-hover:border-[#B19461]/40 transition-all duration-500 cursor-help">
                  <img 
                    src={drLeonam} 
-                   alt="Dr. Leonam - Clínica Prana" 
+                   alt="Diego Gil de Vargas - Diretor Clínica Prana" 
                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                  />
                  
-                 {/* Overlay Gradiente Sutil */}
-                 <div className="absolute inset-0 bg-gradient-to-t from-[#628E86]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                 
-                 {/* Texto no Hover */}
-                 <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                   <p className="text-white text-lg font-serif font-bold leading-relaxed text-center drop-shadow-lg">
-                     Comprometidos com sua saúde e bem-estar.
-                   </p>
+                 {/* Tooltip com a mensagem do diretor */}
+                 <div className="absolute inset-0 bg-gradient-to-t from-[#2D3436] via-[#2D3436]/95 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-8 overflow-y-auto">
+                   <div className="space-y-4 max-h-full">
+                     <p className="text-white/95 text-sm leading-relaxed font-light">
+                       Como diretor da clínica, faço questão de reforçar aquilo que é o nosso maior valor: <span className="font-semibold text-[#B19461]">o cuidado com as pessoas.</span>
+                     </p>
+                     <p className="text-white/90 text-sm leading-relaxed font-light">
+                       Aqui, cada paciente é mais do que um exame, um horário ou um prontuário. É uma história, uma família, um momento de vida que merece atenção, respeito e acolhimento.
+                     </p>
+                     <p className="text-white/90 text-sm leading-relaxed font-light">
+                       O atendimento humanizado, a empatia no olhar e a escuta verdadeira fazem parte da nossa essência.
+                     </p>
+                     <p className="text-white/90 text-sm leading-relaxed font-light">
+                       Aliamos tecnologia, conhecimento e excelência técnica a algo que nunca pode ser substituído: <span className="font-semibold text-[#B19461]">o cuidado genuíno com o ser humano.</span> É isso que garante qualidade real, segurança e confiança em cada atendimento prestado.
+                     </p>
+                     <p className="text-white/90 text-sm leading-relaxed font-light">
+                       Tenho orgulho da nossa equipe, que diariamente transforma profissionalismo em cuidado e competência em acolhimento. Seguiremos firmes nesse propósito, cuidando de pessoas como gostaríamos que cuidassem de nós.
+                     </p>
+                     <div className="pt-3 border-t border-white/20">
+                       <p className="text-[#B19461] text-sm font-semibold italic">— Diego Gil de Vargas</p>
+                       <p className="text-white/70 text-xs">Diretor Clínica Prana</p>
+                     </div>
+                   </div>
                  </div>
                </div>
                
                {/* Badge Decorativo */}
                <div className="absolute -bottom-6 -right-6 bg-[#B19461] text-white px-6 py-3 rounded-full shadow-xl text-xs font-black uppercase tracking-widest">
-                 Excelência Médica
+                 Palavra do Diretor
+               </div>
+             </div>
+             
+             {/* Texto Embaixo da Foto */}
+             <div className="max-w-md mx-auto space-y-6 px-4">
+               <p className="text-white text-base lg:text-lg font-light leading-relaxed text-center">
+                 "Cada paciente é mais que um exame — é uma história que merece <span className="font-bold text-[#B19461]">atenção e cuidado genuíno</span>."
+               </p>
+               <div className="pt-4 border-t border-white/20">
+                 <p className="text-white/90 text-sm font-medium text-center">Diego Gil de Vargas</p>
+                 <p className="text-white/60 text-xs text-center uppercase tracking-widest">Diretor Clínica Prana</p>
                </div>
              </div>
           </div>
