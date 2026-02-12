@@ -49,7 +49,9 @@ export const CLINICA_PRANA_DATA: BrandInfo = {
     "Cirurgia Geral",
     "Nutrição",
     "Colposcopia",
-    "Osteopatia"
+    "Dermatologia",
+    "Clínico Geral",
+    "Atendimento ao Idoso"
   ],
   history: "Inaugurada em 2021, a Clínica Prana nasceu com a proposta de reunir em Ivoti serviços de excelência que antes exigiam deslocamento a outras cidades. Unimos profissionais qualificados e tecnologia de ponta em um ambiente acolhedor.",
   colors: {
